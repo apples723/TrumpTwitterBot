@@ -12,7 +12,7 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 
 latesttweet = open('latesttweet.txt', 'r') 
-trumptweet = latesttweet.read
+trumptweet = latesttweet.read()
 latesttweet.close 
 
 
@@ -23,15 +23,16 @@ for status in stuff:
 	tweet = status.text 
 
 if trumptweet != tweet:
-	print "not done" 
+	print "not done"
 
 if trumptweet == tweet:
 	print "done" 
+	f = open('latesttweet.txt', 'w')
+	f.write(tweet) 
+	f.close 
+
 	
 
-f = open('latesttweet.txt', 'w')
-f.write(tweet) 
-f.close 
 
 
 
