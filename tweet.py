@@ -15,7 +15,7 @@ api = tweepy.API(auth)
 
 stuff = api.user_timeline(screen_name = 'realDonaldTrump', count = 1, include_rts = False)   
  
-for(status in stuff):
+for status in stuff:
 	tweet = status.text 
 f.open('latesttweet.txt', 'w')
 f.write(tweet) 
