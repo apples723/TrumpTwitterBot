@@ -17,11 +17,11 @@ stuff = api.user_timeline(screen_name = 'realDonaldTrump', count = 1, include_rt
  
 for status in stuff:
 	tweet = status.text 
-f.open('latesttweet.txt', 'w')
+f = open('latesttweet.txt', 'w')
 f.write(tweet) 
 f.close 
 
-latesttweet.open('latesttweet.txt', 'r') 
+latesttweet = open('latesttweet.txt', 'r') 
 trumptweet = latesttweet.read
 latesttweet.close 
 
