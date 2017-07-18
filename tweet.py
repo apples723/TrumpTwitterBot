@@ -11,12 +11,24 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 
+latesttweet = open('latesttweet.txt', 'r') 
+trumptweet = latesttweet.read
+latesttweet.close 
+
 
 
 stuff = api.user_timeline(screen_name = 'realDonaldTrump', count = 1, include_rts = False)   
  
 for status in stuff:
 	tweet = status.text 
+
+if trumptweet != tweet:
+	print "not done" 
+
+if trumptweet == tweet:
+	print "done" 
+	
+
 f = open('latesttweet.txt', 'w')
 f.write(tweet) 
 f.close 
