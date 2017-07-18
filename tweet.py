@@ -33,9 +33,5 @@ f = open('latesttweet.txt', 'w')
 f.write(tweet) 
 f.close 
 
-latesttweet = open('latesttweet.txt', 'r') 
-trumptweet = latesttweet.read
-latesttweet.close 
 
- 
 
