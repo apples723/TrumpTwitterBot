@@ -24,7 +24,7 @@ for status in stuff:
 	id = status.id
 
 if trumptweet != tweet:
-	api.update_status("Hello from the Trump Twitter bot. For all sake please stop tweeting", id) 
+	api.update_status("Hello from the Trump Twitter bot. For all sake please stop tweeting", in_reply_to_status_id = id) 
 	f = open('latesttweet.txt', 'w')
 	f.write(tweet) 
 	f.close 
