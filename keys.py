@@ -2,7 +2,7 @@
 AllKeys = open('../keys.txt', 'r')
 lines = []
 for line in AllKeys:	
-	lines.append(line)
+	lines.append(line.rstrip())
 AllKeys.close 
 
 keys = dict(
